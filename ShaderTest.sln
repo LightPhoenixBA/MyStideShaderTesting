@@ -1,0 +1,31 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 16.0.0.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShaderTest.Windows", "ShaderTest.Windows\ShaderTest.Windows.csproj", "{B6642A1F-068F-406D-B2E6-D3E5CC6D7CA6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShaderTest", "ShaderTest\ShaderTest.csproj", "{409981BE-C152-43CB-80F3-84238BDA3505}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6642A1F-068F-406D-B2E6-D3E5CC6D7CA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6642A1F-068F-406D-B2E6-D3E5CC6D7CA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6642A1F-068F-406D-B2E6-D3E5CC6D7CA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6642A1F-068F-406D-B2E6-D3E5CC6D7CA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{409981BE-C152-43CB-80F3-84238BDA3505}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{409981BE-C152-43CB-80F3-84238BDA3505}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{409981BE-C152-43CB-80F3-84238BDA3505}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{409981BE-C152-43CB-80F3-84238BDA3505}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1A664888-7692-4DAF-BE4A-CF03C804F7FD}
+	EndGlobalSection
+EndGlobal

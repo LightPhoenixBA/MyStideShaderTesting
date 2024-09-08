@@ -1,0 +1,47 @@
+﻿namespace ShaderTest
+{
+shader MyDiffuse : ComputeColor//ComputeColor, Texturing , PositionStream , ColorBase , ComputeShaderBase// , //, ShaderBase //, Texturing
+//shader MyDiffuse : ComputeColor, Texturing
+{
+ //rgroup PerMaterial
+ //   {
+ //stage Texture2DArray<float3> myTex;
+ //   }
+  //[Color] float3 myColor : COLOR = float3(0.8f,0.1f,0.2f);
+  //  Texture2DArray<float4> myTex; 
+  //[Color] float3 myFallbackColor = float3(0.3f,1.0f,0.6f);
+cbuffer PerMaterial
+{
+ [Color] stage float3 myFallbackColor = float3(0.3f,1.0f,0.6f);
+  stage Texture2DArray<float4> myTex;
+  [Color] stage float3 myColor = float3(0.8f,0.1f,0.2f);
+}
+ //stage Texture2DArray<float3> myTex;
+ //stage Texture2D myTex;
+ //[Color] float3 myColor = float3(0.8f,0.1f,0.2f);
+  override float4 Compute()
+ {
+ if(0 == myColor.x == myColor.y == myColor.z)
+ {
+    if(0 == myFallbackColor.x == myFallbackColor.y == myFallbackColor.z)
+    {
+    return float4(1,0,0,1);
+    //return clamp(streams.Position,0,1);
+    }
+    else 
+    {
+    return float4(myFallbackColor,1);
+    }
+ }
+ else
+ {
+ return float4(myColor,1);
+ }
+//float3 sampleLoc = float3(streams.TexCoord.xy,0);
+//return float4(0.8f,0.1f,0.2f,1);
+//return myTex.Sample(Sampler,sampleLoc);
+//return float4(sampleLoc,1);
+//return streams.Position;
+}
+};
+}

@@ -1,0 +1,22 @@
+!Package
+SerializedVersion: {Assets: 3.1.0.0}
+Meta:
+    Name: ShaderTest.Windows
+    Version: 1.0.0
+    Authors: []
+    Owners: []
+    Dependencies: null
+AssetFolders:
+    -   Path: !dir Assets
+ResourceFolders:
+    - !dir Resources
+OutputGroupDirectories: {}
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []
+RootAssets:
+    - 13ac32f2-03f7-471d-b5ed-7ae0b01410af:Sphere
+    - 3cc117e0-71be-4ba1-8bfd-58064c568ca6:IdealModel
+    - 6162cf33-2c0f-4e37-833d-765e0e117263:Uv_Map
+    - b3d2b63d-634a-4189-a97b-17c8f8b6dfbd:Sphere Material
+    - faa49025-b3b3-4aa3-b35a-2b173898c611:IdealMaterial

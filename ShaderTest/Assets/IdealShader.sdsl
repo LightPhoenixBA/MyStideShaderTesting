@@ -1,0 +1,16 @@
+﻿namespace ShaderTest
+{
+shader IdealShader< float3 myFallbackColor> : MaterialSurfaceDiffuse , ComputeColor , PositionStream4 , NormalStream 
+{
+ cbuffer PerMaterial
+    {
+   [Color] stage float3 myColor = float3(0.7f,0.7f,0.7f);
+    }
+  override float4 Compute() : COLOR
+ {
+ if(0 == myColor.x == myColor.y == myColor.z)
+  return float4(clamp(streams.meshNormal,0,1),1);
+ else return float4(myColor,1);
+ }
+};
+}

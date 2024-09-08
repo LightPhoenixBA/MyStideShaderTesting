@@ -1,0 +1,23 @@
+namespace ShaderTest
+{
+shader MyTextureShader : ComputeColor , MaterialSurfaceDiffuse , Texturing , PositionStream//MaterialVertexStream//ComputeColorTexture<MyTex, UVSematic>,Texturing,VoxelPositionStream//,MaterialSurfaceDiffuse//Texture2DArray<float3> TTexture//Texture2D TTexture//: ComputeColor//
+{
+//cbuffer PerMaterial
+  rgroup PerMaterial
+  {
+  stage Texture2DArray<float3> myTex;
+  }
+  override float4 Compute()
+ {
+ float3 sampleLoc = float3(streams.TexCoord,1);
+ return float4(myTex.Sample(Sampler,sampleLoc),1);
+
+//return myTex.Sample(Sampler,sampleLoc);
+//float2 sampleLoc = streams.TexCoord.xy;
+//return Texturing.Texture0.Sample(Sampler,sampleLoc);
+//return float4(Texturing.Texture0.Sample(Sampler,sampleLoc),1);
+//return float4(1,1,0,1);
+//return float4(streams.Position.xyz,1);
+ }
+};
+}

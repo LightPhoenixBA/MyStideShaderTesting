@@ -1,0 +1,75 @@
+!SceneAsset
+Id: 69edd99b-1260-433c-a687-2b31ff184135
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Parent: cc797358-92e6-4b62-9fd5-6cf9f5ccebb0:Game/MainScene
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! 68bb70c7-81fb-47e1-9af2-c4ce68fa0b4d
+        - ref!! 8d1181df-9067-4921-838e-9556639730ae
+        - ref!! d05d2c00-f6b4-454b-a44f-85990755e22d
+        - ref!! 5a35db37-ecc9-4d4b-bbe4-c9440fbe55b6
+    Parts:
+        -   Entity:
+                Id: 5a35db37-ecc9-4d4b-bbe4-c9440fbe55b6
+                Name: MaterailStride
+                Components:
+                    ae1e8be59ee208edb0186d01ca61bd6e: !TransformComponent
+                        Id: 85236610-7817-47f8-99a0-3a5b931fe58c
+                        Position: {X: 0.0, Y: 1.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    45522f8698b80fb3ba82b88e68aab4b0: !ShaderTest.MaterialStride,ShaderTest
+                        Id: a744d04f-97dc-4300-ae36-85aa14db923c
+        -   Entity:
+                Id: 68bb70c7-81fb-47e1-9af2-c4ce68fa0b4d
+                Name: IdealEntity
+                Components:
+                    2d08356174468bcc1cd39e0cc830dff2: !TransformComponent
+                        Id: 2e0aa382-d7bd-498a-8d5e-6329781eaa52
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    3a07005469d725e8b85548e1bf07a30f: !ShaderTest.IdealEntityController,ShaderTest
+                        Id: dd70c892-d43f-459e-b9a9-957aa729c8fb
+                        MyModel: 3cc117e0-71be-4ba1-8bfd-58064c568ca6:IdealModel
+                        myControllerColor: {R: 0.0, G: 0.8125, B: 1.0}
+        -   Entity:
+                Id: 8d1181df-9067-4921-838e-9556639730ae
+                Name: MaterialSwap
+                Components:
+                    bf2a8008209511613ffe6d523f828aaa: !TransformComponent
+                        Id: fb0cfc69-d234-4c83-92a6-255e11b49194
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    c20395cc87c03fc25279efee181f361c: !ModelComponent
+                        Id: 53d0c116-2cdb-422e-9ab7-a36e0105fc9e
+                        Model: 13ac32f2-03f7-471d-b5ed-7ae0b01410af:Sphere
+                        IsShadowCaster: false
+                        Materials:
+                            8dd2c9a338592bb7c73521b334f5b07a~0: b3d2b63d-634a-4189-a97b-17c8f8b6dfbd:Sphere Material
+                    d3a85132aa4eef3e3cb6ac156407af90: !ShaderTest.MaterialSwap,ShaderTest
+                        Id: b3cce97a-d1c4-43c1-a81b-69ef44e5eaef
+                        Priority: 1
+                        material: b3d2b63d-634a-4189-a97b-17c8f8b6dfbd:Sphere Material
+                        texture: 6162cf33-2c0f-4e37-833d-765e0e117263:Uv_Map
+                        myColor: {R: 0.037734367, G: 0.8625, B: 0.8315714}
+        -   Entity:
+                Id: d05d2c00-f6b4-454b-a44f-85990755e22d
+                Name: MaterialNew
+                Components:
+                    6ec0d786d7b3f48d8fdd88ecac54c5ce: !TransformComponent
+                        Id: 04a91c06-b107-49a8-b55b-400decdc61cc
+                        Position: {X: 0.0, Y: -0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1c36efbb88de2675215c49a3310ea917: !ShaderTest.MaterialNew,ShaderTest
+                        Id: e85d8a15-41a3-4c99-9df4-e42e48a8ba9d
+                        myColor: {R: 0.0, G: 0.5019608, B: 0.0}

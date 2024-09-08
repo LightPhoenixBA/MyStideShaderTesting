@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net8.0-windows</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="IdealShader.sdsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Stride.Engine" Version="4.2.0.1" />
+    <PackageReference Include="Stride.Video" Version="4.2.0.1" />
+    <PackageReference Include="Stride.Physics" Version="4.2.0.1" />
+    <PackageReference Include="Stride.Navigation" Version="4.2.0.1" />
+    <PackageReference Include="Stride.Particles" Version="4.2.0.1" />
+    <PackageReference Include="Stride.UI" Version="4.2.0.1" />
+    <PackageReference Include="Stride.Core.Assets.CompilerApp" Version="4.2.0.1" IncludeAssets="build;buildTransitive" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Assets\MyTextureShader.sdsl.cs">
+      <DesignTime>True</DesignTime>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Assets\IdealShader.sdsl.cs">
+      <DesignTime>True</DesignTime>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Assets\MyDiffuse.sdsl.cs">
+      <DesignTime>True</DesignTime>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="IdealShader.sdsl.cs">
+      <DesignTime>True</DesignTime>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Assets\MyTextureShader.sdsl">
+      <LastGenOutput>MyTextureShader.sdsl.cs</LastGenOutput>
+    </None>
+    <None Update="Assets\IdealShader.sdsl">
+      <LastGenOutput>IdealShader.sdsl.cs</LastGenOutput>
+    </None>
+    <None Update="Assets\MyDiffuse.sdsl">
+      <LastGenOutput>MyDiffuse.sdsl.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+</Project>

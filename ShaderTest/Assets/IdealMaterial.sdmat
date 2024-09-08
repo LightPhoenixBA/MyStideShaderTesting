@@ -1,0 +1,53 @@
+!MaterialAsset
+Id: faa49025-b3b3-4aa3-b35a-2b173898c611
+SerializedVersion: {Stride: 2.0.0.0}
+Tags: []
+Attributes:
+    MicroSurface: !MaterialGlossinessMapFeature
+        Enabled: false
+        GlossinessMap: !ComputeTextureScalar
+            FallbackValue:
+                Value: 1.0
+            Scale: {X: 1.0, Y: 1.0}
+            Offset: {X: 0.0, Y: 0.0}
+            Enabled: false
+    Diffuse: !MaterialDiffuseMapFeature
+        DiffuseMap: !ComputeShaderClassColor
+            MixinReference: IdealShader
+            Generics:
+                e716c1e642cc8514b9a0c7d9f5ac50fd~myColor: !ComputeColorParameterFloat3
+                    Value: {X: 0.0, Y: 0.0, Z: 1.0}
+            CompositionNodes: {}
+    DiffuseModel: !MaterialDiffuseLambertModelFeature {}
+    SpecularModel: !MaterialSpecularThinGlassModelFeature
+        Enabled: false
+        RefractiveIndex: 1.52
+        Fresnel: !MaterialSpecularMicrofacetFresnelThinGlass {}
+        Visibility: !MaterialSpecularMicrofacetVisibilitySmithSchlickGGX {}
+        NormalDistribution: !MaterialSpecularMicrofacetNormalDistributionGGX {}
+        Environment: !MaterialSpecularMicrofacetEnvironmentThinGlass {}
+    Overrides:
+        UVScale: {X: 1.0, Y: 1.0}
+    ClearCoat: !MaterialClearCoatFeature
+        Enabled: false
+        LODDistance: !ComputeFloat
+            Value: 1.0
+        BasePaintDiffuseMap: !ComputeColor
+            Value: {R: 0.76875, G: 0.024023438, B: 0.024023438, A: 1.0}
+        BasePaintGlossinessMap: !ComputeFloat
+            Value: 0.0
+        MetalFlakesDiffuseMap: !ComputeColor
+            Value: {R: 0.0, G: 0.0, B: 0.0, A: 1.0}
+        MetalFlakesGlossinessMap: !ComputeFloat
+            Value: 0.0
+        MetalFlakesMetalnessMap: !ComputeFloat
+            Value: 0.0
+        MetalFlakesNormalMap: !ComputeColor
+            Value: {R: 0.0, G: 0.0, B: 0.0, A: 1.0}
+        ClearCoatGlossinessMap: !ComputeFloat
+            Value: 0.0
+        ClearCoatMetalnessMap: !ComputeFloat
+            Value: 0.0
+        OrangePeelNormalMap: !ComputeColor
+            Value: {R: 0.0, G: 0.0, B: 0.0, A: 1.0}
+Layers: {}
