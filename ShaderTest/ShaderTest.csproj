@@ -7,26 +7,38 @@
     <None Remove="IdealShader.sdsl" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="LegionForge.Blocks" Version="1.0.0" />
+    <PackageReference Include="LegionForge.Globals" Version="1.0.0" />
+    <PackageReference Include="Stride.Core.Assets.CompilerApp" Version="4.2.0.1" IncludeAssets="build;buildTransitive" />
     <PackageReference Include="Stride.Engine" Version="4.2.0.1" />
     <PackageReference Include="Stride.Video" Version="4.2.0.1" />
     <PackageReference Include="Stride.Physics" Version="4.2.0.1" />
     <PackageReference Include="Stride.Navigation" Version="4.2.0.1" />
     <PackageReference Include="Stride.Particles" Version="4.2.0.1" />
-    <PackageReference Include="Stride.UI" Version="4.2.0.1" />
-    <PackageReference Include="Stride.Core.Assets.CompilerApp" Version="4.2.0.1" IncludeAssets="build;buildTransitive" />
+	<PackageReference Include="Stride.UI" Version="4.2.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Assets\MyTextureShader.sdsl.cs">
-      <DesignTime>True</DesignTime>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <AutoGen>True</AutoGen>
-    </Compile>
     <Compile Update="Assets\IdealShader.sdsl.cs">
       <DesignTime>True</DesignTime>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>
     </Compile>
     <Compile Update="Assets\MyDiffuse.sdsl.cs">
+      <DesignTime>True</DesignTime>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Assets\MyTextureShader.sdsl.cs">
+      <DesignTime>True</DesignTime>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Assets\myVertexShader.sdsl.cs">
+      <DesignTime>True</DesignTime>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Assets\myVertexShaderBase.sdsl.cs">
       <DesignTime>True</DesignTime>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>
@@ -38,14 +50,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Update="Assets\MyTextureShader.sdsl">
-      <LastGenOutput>MyTextureShader.sdsl.cs</LastGenOutput>
-    </None>
     <None Update="Assets\IdealShader.sdsl">
       <LastGenOutput>IdealShader.sdsl.cs</LastGenOutput>
     </None>
     <None Update="Assets\MyDiffuse.sdsl">
       <LastGenOutput>MyDiffuse.sdsl.cs</LastGenOutput>
+    </None>
+    <None Update="Assets\MyTextureShader.sdsl">
+      <LastGenOutput>MyTextureShader.sdsl.cs</LastGenOutput>
+    </None>
+    <None Update="Assets\myVertexShader.sdsl">
+      <LastGenOutput>myVertexShader.sdsl.cs</LastGenOutput>
+    </None>
+    <None Update="Assets\myVertexShaderBase.sdsl">
+      <LastGenOutput>myVertexShaderBase.sdsl.cs</LastGenOutput>
     </None>
   </ItemGroup>
 </Project>

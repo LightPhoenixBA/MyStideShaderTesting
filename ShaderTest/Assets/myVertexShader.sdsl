@@ -1,0 +1,42 @@
+//#include "SampleNormal.hlsl"
+namespace ShaderTest
+{
+shader myVertexShader : ComputeColor , ShaderBase //ComputeColor //, ShaderBase , Texturing
+{
+ stage SamplerState mySampler
+ {
+     Filter = MIN_MAG_MIP_LINEAR;
+     AddressU = Wrap;
+     AddressV = Wrap;
+ };
+ rgroup PerMaterial
+ {
+ stage Texture2DArray myTex;
+ }
+ cbuffer PerDraw
+ {
+ stage StructuredBuffer<MyVertexDefiniton> verts;
+ }
+ struct MyVertexDefiniton
+ {
+ float3 Position : Position; 
+ float3 TextureCoordinate : MYTEXCOORD;
+ float3 Normal : Normal;
+ };
+ stage stream float3 TextureCoordinate : MYTEXCOORD;
+ //stream uint vertI : SV_VERTEXID;//SV_VertexID;
+  //override stage void VSMain()
+  //{
+  //base.VSMain();
+  ////streams.ColorTarget = 1;
+  ////MyVertexDefiniton Vert = verts[streams.vertI];
+  ////streams.TextureCoordinate = Vert.TextureCoordinate;
+  ////streams.TextureCoordinate.z = 3;
+  ////streams.TexCoord = streams.TextureCoordinate.xy;
+  //}
+  override float4 Compute()
+  {
+   return myTex.Sample(mySampler , streams.TextureCoordinate);
+  }
+ };
+}

@@ -147,7 +147,7 @@ namespace ShaderTest
                 Generics = new ComputeColorParameters()
                 {
                     {"myTex", computeTexure },
-                    {"myColor",new ComputeColorParameterFloat3() { Value = Color.DarkSeaGreen.ToVector3() } }
+                    {"myColor",new ComputeColorParameterFloat3() { Value = Color.HotPink.ToVector3() } }
                     //{"mySampler",SamplerState.New(GraphicsDevice,SamplerStateDescription.Default) }
                 }
             };

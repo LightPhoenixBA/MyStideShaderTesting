@@ -11,6 +11,7 @@ Hierarchy:
         - ref!! 8d1181df-9067-4921-838e-9556639730ae
         - ref!! d05d2c00-f6b4-454b-a44f-85990755e22d
         - ref!! 5a35db37-ecc9-4d4b-bbe4-c9440fbe55b6
+        - ref!! ea9997c1-48ff-4d87-9b1a-f85090ca3408
     Parts:
         -   Entity:
                 Id: 5a35db37-ecc9-4d4b-bbe4-c9440fbe55b6
@@ -58,7 +59,7 @@ Hierarchy:
                         Id: b3cce97a-d1c4-43c1-a81b-69ef44e5eaef
                         Priority: 1
                         material: b3d2b63d-634a-4189-a97b-17c8f8b6dfbd:Sphere Material
-                        texture: 6162cf33-2c0f-4e37-833d-765e0e117263:Uv_Map
+                        texture: 7e2761d1-ef86-420a-b7a7-a0ed1c16f9bb:StrideClearCoatMetalFlakesNM
                         myColor: {R: 0.037734367, G: 0.8625, B: 0.8315714}
         -   Entity:
                 Id: d05d2c00-f6b4-454b-a44f-85990755e22d
@@ -73,3 +74,20 @@ Hierarchy:
                     1c36efbb88de2675215c49a3310ea917: !ShaderTest.MaterialNew,ShaderTest
                         Id: e85d8a15-41a3-4c99-9df4-e42e48a8ba9d
                         myColor: {R: 0.0, G: 0.5019608, B: 0.0}
+        -   Entity:
+                Id: ea9997c1-48ff-4d87-9b1a-f85090ca3408
+                Name: TextureModel
+                Components:
+                    f57db65b905897edfda3bf5de1948d1f: !TransformComponent
+                        Id: 495a7db4-51a9-4030-8fb4-0b6b20947f46
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7e93f6e8db932377d095c3e86d3401ab: !ModelComponent
+                        Id: c108633a-02ce-4060-b78d-b7509baf0e28
+                        Model: c0a3b623-425e-49da-b0ee-fc3a73ba1d35:TexturedModel
+                        Materials:
+                            9b69cc54b3122e9eb18c270bc87a4a78~0: eb5a33ca-3316-4cef-b11a-f31be9fa071b:TexturedMaterial
+                    5a85fd908f3cda301b8b4708b17aa395: !ShaderTest.MaterialTexture,ShaderTest
+                        Id: c7a0e2e9-260f-45d4-95e2-1687acb92840

@@ -1,8 +1,13 @@
 !Texture
-Id: 6162cf33-2c0f-4e37-833d-765e0e117263
+Id: c8e06af7-e304-4d2a-af75-d07316fa4be3
 SerializedVersion: {Stride: 2.0.0.0}
 Tags: []
-Source: !file ../Resources/LF_BlockTextures/Uv_Map.png
+Source: !file ../../../Legion Forge/Globals/Resources/LF_BlockTextures/Uv_Map.png
+Width: 64.0
+Height: 64.0
+IsSizeInPercentage: false
+IsCompressed: false
 Type: !ColorTextureType
     ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+GenerateMipmaps: false
 IsStreamable: false

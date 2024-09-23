@@ -9,4 +9,4 @@ Type: !CubeProceduralModel
     LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
     NumberOfTextureCoordinates: 10
     MaterialInstance:
-        Material: null
+        Material: eb5a33ca-3316-4cef-b11a-f31be9fa071b:TexturedMaterial
